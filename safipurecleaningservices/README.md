@@ -71,16 +71,13 @@ At Safipure, we bring back freshness to your homes, offices, and vehicles with p
 All contributions, suggestions, and feedback are welcome! Open an issue or submit a pull request to make this project even better.
 
 📸 Screenshots
-Add screenshots of your homepage and service section here (optional).
+Add screenshots of your homepage and service section here .
 
 📝 License
 This project is open for educational or demo purposes. For commercial use, please contact the project owner.
 
 Made with ❤️ by Safipure Cleaning Services Team
-yaml
-Copy
-Edit
+
 
 ---
 
-Let me know if you'd like help turning this into a downloadable file or uploading it to GitHub
