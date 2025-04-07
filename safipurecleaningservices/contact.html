@@ -86,25 +86,17 @@
 
     <div class="form-container">
         <h4>Contact Us</h4>
-        <form action="https://api.web3forms.com/submit" method="POST">
-            <!-- Replace with your Access Key -->
-            <input type="hidden" name="access_key" value="248b0fae-4da7-46de-8cb3-4e675bbc3a00">
-
+        <form action="process_contact.php" method="POST" id="contactForm">
             <label for="name">Your Name</label>
             <input type="text" id="name" name="name" required placeholder="Enter your name">
-
             <label for="email">Your Email</label>
             <input type="email" id="email" name="email" required placeholder="Enter your email">
-
+    
             <label for="message">Your Message</label>
             <textarea name="message" id="message" required placeholder="Write your message here"></textarea>
-
-            <!-- Honeypot Spam Protection -->
-            <input type="checkbox" name="botcheck" class="hidden">
-
-            <!-- Custom Confirmation / Success Page -->
-            <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
-
+    
+            <div id="formMessage"></div>
+    
             <button type="submit">Submit Form</button>
         </form>
     </div>
@@ -132,13 +124,31 @@
     </footer>
     <!-- Javascript for toggle menu -->
     <script>
-        var navLinks = document.getElementById("navLinks");
-        function showMenu(){
-            navLinks.style.right = "0";
-        }
-        function hideMenu(){
-            navLinks.style.right = "-200px";
-        }
-    </script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            
+            fetch('process_contact.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                const messageDiv = document.getElementById('formMessage');
+                
+                if (data.success) {
+                    messageDiv.innerHTML = <div class="success-message">${data.message}</div>;
+                    document.getElementById('contactForm').reset();
+                } else {
+                    messageDiv.innerHTML = <div class="error-message">${data.message}</div>;
+                }
+            })
+            .catch(error => {
+                document.getElementById('formMessage').innerHTML = '<div class="error-message">An error occurred. Please try again later.</div>';
+                console.error('Error:', error);
+            });
+        });
+        </script>
 </body>
 </html>
