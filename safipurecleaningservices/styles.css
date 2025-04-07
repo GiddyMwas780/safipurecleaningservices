@@ -1,0 +1,627 @@
+*{
+    /* margin: 0;
+    padding: 0; */
+    /* font-family: Arial, sans-serif; */
+    /* position: fixed; */
+    /* overflow-x: hidden; */
+    
+}
+html, body { 
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden; 
+    font-family: Arial, sans-serif;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    /* background-image: url("WhatsApp Image 2025-01-27 at 14.43.58_aad2e1fc.jpg"); */
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url("WhatsApp Image 2025-01-22 at 09.40.42_6d4a57e9.jpg");  
+    background-position: center;/*("WhatsApp Image 2025-01-20 at 21.35.28_ad655465.jpg");*/
+    background-size: cover;
+    position: relative;
+    /* (background-image {
+        animation: zoomInOut 2s infinite;
+    } */
+
+    @keyframes zoomInOut {
+        0%, 100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.5);
+        }
+    }
+    
+}
+.Safipure-Cleaners {
+    font-size: 24px; /* Adjust the font size /
+    font-weight: bold; /* Make the text bold */
+    color: #ffcc00;i /* Change the text color/
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
+    margin-left: 10px; /* Add some space between the image and the text */
+    text-transform: uppercase; /* Make the text uppercase */
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav a img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links{
+    height: 16px;
+    width: 16px;
+}
+.nav-links ul li{
+list-style: none;
+display: inline-block;
+padding: 8px 12px;
+position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 1s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 42px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+nav .menu{
+   /* height: 16px; */
+    display: none;
+}
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: fixed;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+        nav .menu{
+            display: block;
+            color: #fff;
+            margin: 10px;
+            font-size: 22px;
+            cursor: pointer;
+         } 
+    .nav-links ul{
+        padding: 30px;
+     } 
+    }
+    /*campus*/
+.campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.campus-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.campus-col img{
+    height: 250px;
+    width: 100%;
+    display: block;
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer:hover{
+    /* background: rgba(226,0,0,0.7); */
+    
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: red;
+    font-size: 36px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+    /*testimonials*/
+.testimonials{
+    width: 100%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+.testimonials-column{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 2%;
+    text-align: left;
+     background: #fff3f3; 
+    /* background: brown; */
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+.testimonials-column img{
+    height: 100px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.testimonials-column p{
+    padding: 0;
+}
+.testimonials-column h3{
+    margin-top: 5px;
+    text-align: left;
+}
+ @media(max-width: 700px){
+    .testimonial-col img{
+        margin-left: 0px;
+        margin-right: 15px;
+     } 
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+/*Styling of Course*/
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    color: aqua;
+}
+h2{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.course-col{
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.course-col:hover{
+    box-shadow: 0 0 20px 0px black;
+}
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+/* Styling of watsap icon */
+.whatsapp-container {
+    position: fixed;
+    bottom: 40px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+
+.whatsapp-float {
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
+    animation: bounce 2s infinite;
+}
+
+.whatsapp-float img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.whatsapp-text {
+    margin-left: 10px;
+    font-size: 16px;
+    color: #25d366;
+    font-weight: bold;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-20px); }
+    60% { transform: translateY(-10px); }
+}
+
+/*footer*/
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+    .icons {
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        color: #f44336;
+    }
+    .icon {
+        width: 24px; 
+        height: 24px;
+        object-fit: cover; 
+        margin: 5px; 
+        padding: 18px 0;
+        cursor: pointer;
+        
+    } 
+    .icons img{
+        color: #f44336;
+    }
+
+
+/*call to action*/
+.cta{
+    margin: 100px auto;
+    width: 80%;
+    /* background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(download.jpg); */
+    background: black;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+.cta h1{
+    color: #fff;
+    margin-bottom: 30px;
+    padding: 30px;
+}
+@media(max-width: 700px){
+    .cta h1{
+        font-size: 24px;
+    }
+}
+/* About us page */
+.sub-header{
+     min-height: 70vh; 
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url("WhatsApp Image 2025-01-22 at 09.40.42_6d4a57e9.jpg");
+     background-position: center;
+    background-size: cover;
+} 
+/* contact us page */
+.sub-sub-header{
+    min-height: 60vh;
+    width: 100%;
+     background-image: /*linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),*/url("hatsApp Image 2025-01-22 at 09.40.45_2e9ef0d9.jpg"); 
+    background-color: black;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.location{
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+.location iframe{
+    width: 100%;
+}
+.contact-us{
+    width: 80%;
+    margin: auto;
+}
+.contact-col{
+    flex-basis: 48%;
+    margin-bottom: 30px;
+}
+.contact-col div{
+    /* display: flex; */
+     align-items: center; 
+     margin-bottom: 40px; 
+}
+.contact-col div .fa img{
+    font-size: 28px;
+    color: #f44336;
+    margin: 10px;
+    margin-right: 30px;
+
+}
+.red-btn{
+    color: red;
+    border-color: red;
+}
+/* .contact-col input, .contact-col textarea{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}  */
+ /* Styling of contact email form */
+ /* Global styles */
+/* Global styles */
+/* Container to center the form */
+.form-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+h4 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form inputs */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+input[type="text"], input[type="email"] {
+    background-color: #f9f9f9;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+    background-color: #f9f9f9;
+}
+
+/* Button styles */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Label for the form inputs */
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Style for hidden checkbox (honeypot) */
+input[type="checkbox"].hidden {
+    display: none;
+}
+
+/* End of form styling */
+.advertising{
+color: red;
+text-align: center;
+}
+.advertising-col{
+    flex: 50%;
+}
+/* Styling of FAQ */
+
+/* Header styles */
+.headerFAQ {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.headerFAQ header h1 {
+    font-size: 2.5em;
+}
+
+/* Main container for FAQs */
+.faq-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* FAQ items */
+.faq-item {
+    margin-bottom: 20px;
+}
+
+/* Button for the question */
+.faq-question {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1.2em;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+    background-color: #45a049;
+}
+
+/* Answer styles */
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background-color: #f9f9f9;
+    margin-top: 10px;
+    border-left: 5px solid #4CAF50;
+}
+/* styling Video */
+     /* Ensure the row takes full width ?*/
+     .row{
+        margin-top: 5%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    /* Style each video column */
+    .video-col {
+        flex: 1 1 100%;
+        padding: 10px;
+        max-width: 100%;
+        display: flex;
+        justify-content: center; /* Centers the video inside the column */
+    }
+    
+    /* Style the video to be responsive and visually appealing */
+    .video-col video {
+        width: 100%;
+        height: auto;
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow /
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    }
+    
+    /* Hover effects */
+    .video-col video:hover {
+        transform: scale(1.05); /* Slight zoom effect */
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    }
+    
+    /* Adjust for larger screens */
+    @media (min-width: 600px) {
+        .video-col {
+            flex: 1 1 calc(50% - 20px); /* Two videos per row on larger screens */
+        }
+    }
+    .videos h2{
+        text-align: center;
+        color: aqua;
+    } 
