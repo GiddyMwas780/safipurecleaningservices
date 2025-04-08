@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindParam(':address', $address);
         $stmt->bindParam(':notes', $notes);
         
-        /
+        
         $stmt->execute();
         
         
