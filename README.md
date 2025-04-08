@@ -12,7 +12,7 @@ Welcome to the official website for **Safipure Cleaning Services** – your trus
 
 ## 📁 Project Structure
 
-📦 Safipure-Cleaners ├── index.html ├── About.html ├── services.html ├── contact.html ├── styles.css ├── assets/ │ ├── logo.jpg │ ├── sofa-cleaning.jpg │ ├── carpet-cleaning.jpg │ └── ... other images └── scripts/ └── main.js (if needed)
+📦 Safipure-Cleaners ├── index.html ├── About.html ├── services.html ├── contact.html ├── styles.css ├── assets/ │ ├── logo.jpg │ ├── sofa-cleaning.jpg │ ├── carpet-cleaning.jpg │ └── ... other images └── scripts/ └── main.js/internal
 
 yaml
 Copy
